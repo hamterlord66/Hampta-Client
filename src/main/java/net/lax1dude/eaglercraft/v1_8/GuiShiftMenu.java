@@ -30,7 +30,7 @@ public class GuiShiftMenu extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         this.drawDefaultBackground();
-        this.drawCenteredString(this.fontRendererObj, "My Custom Menu", this.width / 2, this.height / 2 - 60, 0xFFFFFF);
+        this.drawCenteredString(this.fontRendererObj, "Hampta Menu", this.width / 2, this.height / 2 - 60, 0xFFFFFF);
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 
