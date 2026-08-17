@@ -1445,7 +1445,11 @@ public class Minecraft implements IThreadListener {
 						if (k == 1 || (k > -1 && k == this.gameSettings.keyBindClose.getKeyCode())) {
 							this.displayInGameMenu();
 						}
-
+						if (k == 77 && this.currentScreen == null) {
+    						if (Keyboard.getEventKeyState()) {
+        					this.displayGuiScreen(new GuiShiftMenu());
+    					}
+					}
 						if (k == 32 && Keyboard.isKeyDown(61) && this.ingameGUI != null) {
 							this.ingameGUI.getChatGUI().clearChatMessages();
 						}
