@@ -20,7 +20,7 @@ import net.minecraft.util.ResourceLocation;
 
 public enum DefaultSkins {
 
-	DEFAULT_STEVE(0, "Default Steve", new ResourceLocation("eagler:skins/01.default_steve.png"), SkinModel.STEVE),
+	DEFAULT_STEVE(0, "Test", new ResourceLocation("eagler:skins/01.default_steve.png"), SkinModel.STEVE),
 	DEFAULT_ALEX(1, "Default Alex", new ResourceLocation("eagler:skins/02.default_alex.png"), SkinModel.ALEX),
 	TENNIS_STEVE(2, "Tennis Steve", new ResourceLocation("eagler:skins/03.tennis_steve.png"), SkinModel.STEVE),
 	TENNIS_ALEX(3, "Tennis Alex", new ResourceLocation("eagler:skins/04.tennis_alex.png"), SkinModel.ALEX),
