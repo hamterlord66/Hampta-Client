@@ -1,0 +1,43 @@
+name: Compile Eaglercraft 1.8 Workspace
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x gradlew || true
+
+      - name: Build Offline Client
+        run: |
+          if [ -f "./gradlew" ]; then
+            ./gradlew makeMainOfflineDownload
+          elif [ -f "./CompileLatestClient.sh" ]; then
+            chmod +x CompileLatestClient.sh
+            ./CompileLatestClient.sh --headless
+          else
+            echo "No build script found!" && exit 1
+          fi
+
+      - name: Upload HTML Client Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Eaglercraft_1.8_Offline_Client
+          path: |
+            javascript/**
+            target_teavm_javascript/**
+            target/*.html
+            build/libs/*.html
+            *.html
