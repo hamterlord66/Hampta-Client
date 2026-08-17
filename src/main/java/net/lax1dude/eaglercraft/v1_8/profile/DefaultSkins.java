@@ -20,12 +20,12 @@ import net.minecraft.util.ResourceLocation;
 
 public enum DefaultSkins {
 
-	DEFAULT_STEVE(0, "Default Steve", new ResourceLocation("eagler:skins/01.default_steve.png"), SkinModel.STEVE),
-	DEFAULT_ALEX(1, "Default Alex", new ResourceLocation("eagler:skins/02.default_alex.png"), SkinModel.ALEX),
-	TENNIS_STEVE(2, "Tennis Steve", new ResourceLocation("eagler:skins/03.tennis_steve.png"), SkinModel.STEVE),
-	TENNIS_ALEX(3, "Tennis Alex", new ResourceLocation("eagler:skins/04.tennis_alex.png"), SkinModel.ALEX),
-	TUXEDO_STEVE(4, "Tuxedo Steve", new ResourceLocation("eagler:skins/05.tuxedo_steve.png"), SkinModel.STEVE),
-	TUXEDO_ALEX(5, "Tuxedo Alex", new ResourceLocation("eagler:skins/06.tuxedo_alex.png"), SkinModel.ALEX),
+	DEFAULT_STEVE(0, "Cooking Hampta", new ResourceLocation("eagler:skins/cookhampta.png"), SkinModel.STEVE),
+	DEFAULT_ALEX(1, "Farmer Hampta", new ResourceLocation("eagler:skins/farmerhampta.png"), SkinModel.ALEX),
+	TENNIS_STEVE(2, "Hampta 2.0", new ResourceLocation("eagler:skins/hamptatwo.png"), SkinModel.STEVE),
+	TENNIS_ALEX(3, "Hat Hampta", new ResourceLocation("eagler:skins/hamptawhat.png"), SkinModel.ALEX),
+	TUXEDO_STEVE(4, "Luffy Hampta", new ResourceLocation("eagler:skins/luffyhampta.png"), SkinModel.STEVE),
+	TUXEDO_ALEX(5, "Basic Hampta", new ResourceLocation("eagler:skins/orhampta.png"), SkinModel.ALEX),
 	ATHLETE_STEVE(6, "Athlete Steve", new ResourceLocation("eagler:skins/07.athlete_steve.png"), SkinModel.STEVE),
 	ATHLETE_ALEX(7, "Athlete Alex", new ResourceLocation("eagler:skins/08.athlete_alex.png"), SkinModel.ALEX),
 	CYCLIST_STEVE(8, "Cyclist Steve", new ResourceLocation("eagler:skins/09.cyclist_steve.png"), SkinModel.STEVE),
