@@ -2,7 +2,6 @@ package net.lax1dude.eaglercraft.v1_8;
 
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiButton;
-import java.io.IOException;
 
 public class GuiShiftMenu extends GuiScreen {
 
@@ -15,7 +14,7 @@ public class GuiShiftMenu extends GuiScreen {
     }
 
     @Override
-    protected void actionPerformed(GuiButton button) throws IOException {
+    protected void actionPerformed(GuiButton button) {
         if (button.id == 0) {
             fullbrightEnabled = !fullbrightEnabled;
             button.displayString = "Fullbright: " + (fullbrightEnabled ? "ON" : "OFF");
@@ -30,7 +29,7 @@ public class GuiShiftMenu extends GuiScreen {
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         this.drawDefaultBackground();
-        this.drawCenteredString(this.fontRendererObj, "Hampta Menu", this.width / 2, this.height / 2 - 60, 0xFFFFFF);
+        this.drawCenteredString(this.fontRendererObj, "My Custom Menu", this.width / 2, this.height / 2 - 60, 0xFFFFFF);
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 
