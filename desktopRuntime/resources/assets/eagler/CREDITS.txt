@@ -4,3 +4,5 @@ Hampta Client Credits
 Owner: Hampta
 Supporters: Dc server
 Why I built it?: Funnies
+
+%%%%%%%%%%%%%%%%%%%%
