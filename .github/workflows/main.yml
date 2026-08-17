@@ -1,4 +1,4 @@
-name: Compile Eaglercraft 1.8 Workspace
+name: Compile Eaglercraft 1.8 WASM Client
 
 on:
   workflow_dispatch:
@@ -17,27 +17,30 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Make Gradle Wrapper Executable
-        run: chmod +x gradlew || true
+      - name: Make Scripts Executable
+        run: |
+          chmod +x gradlew || true
+          chmod +x target_teavm_wasm_gc/MakeWASMClientBundle.sh || true
 
-      - name: Build Offline Client
+      - name: Build WASM Client
         run: |
           if [ -f "./gradlew" ]; then
-            ./gradlew makeMainOfflineDownload
-          elif [ -f "./CompileLatestClient.sh" ]; then
-            chmod +x CompileLatestClient.sh
-            ./CompileLatestClient.sh --headless
-          else
-            echo "No build script found!" && exit 1
+            ./gradlew makeMainWasmClientBundle || ./gradlew build
+          fi
+          if [ -f "target_teavm_wasm_gc/MakeWASMClientBundle.sh" ]; then
+            cd target_teavm_wasm_gc && ./MakeWASMClientBundle.sh && cd ..
           fi
 
-      - name: Upload HTML Client Artifact
+      - name: Upload WASM Client Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Eaglercraft_1.8_Offline_Client
+          name: Eaglercraft_1.8_WASM_Client
           path: |
+            javascript_dist/**
+            target_teavm_wasm_gc/**
             javascript/**
-            target_teavm_javascript/**
-            target/*.html
-            build/libs/*.html
+            build/libs/**
             *.html
+            *.wasm
+            *.epw
+            *.js
