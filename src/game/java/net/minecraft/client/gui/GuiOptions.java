@@ -70,7 +70,7 @@ public class GuiOptions extends GuiScreen implements GuiYesNoCallback {
 	 */
 	public void initGui() {
 		int i = 0;
-		this.field_146442_a = I18n.format("options.title", new Object[0]);
+		this.field_146442_a = I18n.format("Settings", new Object[0]);
 
 		for (int j = 0; j < field_146440_f.length; ++j) {
 			GameSettings.Options gamesettings$options = field_146440_f[j];
@@ -112,13 +112,13 @@ public class GuiOptions extends GuiScreen implements GuiYesNoCallback {
 		this.buttonList.add(new GuiButton(8675309, this.width / 2 + 5, this.height / 6 + 48 - 6, 150, 20,
 				I18n.format("shaders.gui.optionsButton")));
 		this.buttonList.add(new GuiButton(106, this.width / 2 - 155, this.height / 6 + 72 - 6, 150, 20,
-				I18n.format("options.sounds", new Object[0])));
+				I18n.format("Sound/Music", new Object[0])));
 		boolean support = ScreenRecordingController.isSupported();
 		this.buttonList.add(broadcastSettings = new GuiButton(107, this.width / 2 + 5, this.height / 6 + 72 - 6, 150,
 				20, I18n.format(support ? "options.screenRecording.button" : "options.screenRecording.unsupported")));
 		broadcastSettings.enabled = support;
 		this.buttonList.add(new GuiButton(101, this.width / 2 - 155, this.height / 6 + 96 - 6, 150, 20,
-				I18n.format("options.video", new Object[0])));
+				I18n.format("Proformance", new Object[0])));
 		this.buttonList.add(new GuiButton(100, this.width / 2 + 5, this.height / 6 + 96 - 6, 150, 20,
 				I18n.format("options.controls", new Object[0])));
 		this.buttonList.add(new GuiButton(102, this.width / 2 - 155, this.height / 6 + 120 - 6, 150, 20,
