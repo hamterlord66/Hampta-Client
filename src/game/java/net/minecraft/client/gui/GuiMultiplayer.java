@@ -341,7 +341,7 @@ public class GuiMultiplayer extends GuiScreen implements GuiYesNoCallback {
 		this.hoveringText = null;
 		this.drawDefaultBackground();
 		this.serverListSelector.drawScreen(i, j, f);
-		this.drawCenteredString(this.fontRendererObj, I18n.format("multiplayer.title", new Object[0]), this.width / 2,
+		this.drawCenteredString(this.fontRendererObj, I18n.format("Server's You Have", new Object[0]), this.width / 2,
 				20, 16777215);
 		super.drawScreen(i, j, f);
 		relaysButton.drawScreen(i, j);
@@ -383,7 +383,7 @@ public class GuiMultiplayer extends GuiScreen implements GuiYesNoCallback {
 
 			if (par1 < lanServerList.countServers()) {
 				LANServerList.LanServer var2 = lanServerList.getServer(par1);
-				connectToLAN("Connecting to '" + var2.getLanServerMotd() + "'...", var2.getLanServerCode(),
+				connectToLAN("Joining '" + var2.getLanServerMotd() + "'...", var2.getLanServerCode(),
 						var2.getLanServerRelay());
 			}
 		}
