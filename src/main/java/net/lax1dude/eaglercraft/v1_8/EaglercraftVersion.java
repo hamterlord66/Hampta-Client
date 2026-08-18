@@ -26,7 +26,7 @@ public class EaglercraftVersion {
 	
 	// EPK Version Identifier
 	
-	public static final String EPKVersionIdentifier = "u53"; // Set to null to disable EPK version check
+	public static final String EPKVersionIdentifier = "null"; // Set to null to disable EPK version check
 	
 	// Updating configuration
 	
@@ -51,11 +51,11 @@ public class EaglercraftVersion {
 	
 	// Miscellaneous variables:
 
-	public static final String mainMenuStringA = "Minecraft 1.8.8";
+	public static final String mainMenuStringA = "Client Update: 1.0.1";
 	public static final String mainMenuStringB = projectOriginName + " " + projectOriginRevision + "-"
 			+ projectOriginVersion + " ultimate [" + EagRuntime.getPlatformType().getName() + "]";
 	public static final String mainMenuStringC = "";
-	public static final String mainMenuStringD = "Resources Copyright Mojang AB";
+	public static final String mainMenuStringD = "This is Hampta's T_T";
 
 	public static final String mainMenuStringE = projectForkName + " " + projectForkVersion;
 	public static final String mainMenuStringF = "Made by " + projectForkVendor;
