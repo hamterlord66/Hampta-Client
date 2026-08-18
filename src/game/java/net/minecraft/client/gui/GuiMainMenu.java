@@ -287,7 +287,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback {
 		}
 
 		this.buttonList.add(new GuiButton(0, this.width / 2 - 100, i + 72 + 12, 98, 20,
-				I18n.format("menu.options", new Object[0])));
+				I18n.format("Settings", new Object[0])));
 		this.buttonList.add(new GuiButton(4, this.width / 2 + 2, i + 72 + 12, 98, 20,
 				I18n.format("menu.editProfile", new Object[0])));
 
