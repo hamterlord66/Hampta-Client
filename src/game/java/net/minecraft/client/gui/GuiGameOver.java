@@ -90,9 +90,9 @@ public class GuiGameOver extends GuiScreen implements GuiYesNoCallback {
 					this.mc.shutdownIntegratedServer(new GuiMainMenu());
 				}
 			} else {
-				GuiYesNo guiyesno = new GuiYesNo(this, I18n.format("deathScreen.quit.confirm", new Object[0]), "",
-						I18n.format("deathScreen.titleScreen", new Object[0]),
-						I18n.format("deathScreen.respawn", new Object[0]), 0);
+				GuiYesNo guiyesno = new GuiYesNo(this, I18n.format("Are you sure you wanna quit?", new Object[0]), "",
+						I18n.format("You died... sad", new Object[0]),
+						I18n.format("Reincarnat", new Object[0]), 0);
 				this.mc.displayGuiScreen(guiyesno);
 				guiyesno.setButtonDelay(20);
 			}
@@ -122,7 +122,7 @@ public class GuiGameOver extends GuiScreen implements GuiYesNoCallback {
 		GlStateManager.scale(2.0F, 2.0F, 2.0F);
 		boolean flag = this.mc.theWorld.getWorldInfo().isHardcoreModeEnabled();
 		String s = flag ? I18n.format("deathScreen.title.hardcore", new Object[0])
-				: I18n.format("deathScreen.title", new Object[0]);
+				: I18n.format("You died... sad", new Object[0]);
 		this.drawCenteredString(this.fontRendererObj, s, this.width / 2 / 2, 30, 16777215);
 		GlStateManager.popMatrix();
 		if (flag) {
