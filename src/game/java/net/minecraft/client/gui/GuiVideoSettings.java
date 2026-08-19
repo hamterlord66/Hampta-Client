@@ -67,10 +67,10 @@ public class GuiVideoSettings extends GuiScreen {
 	 * window resizes, the buttonList is cleared beforehand.
 	 */
 	public void initGui() {
-		this.screenTitle = I18n.format("options.videoTitle", new Object[0]);
+		this.screenTitle = I18n.format(" performance Settings", new Object[0]);
 		this.buttonList.clear();
 		this.buttonList.add(
-				new GuiButton(200, this.width / 2 - 100, this.height - 27, I18n.format("gui.done", new Object[0])));
+				new GuiButton(200, this.width / 2 - 100, this.height - 27, I18n.format("Done!", new Object[0])));
 		this.optionsRowList = new GuiOptionsRowList(this.mc, this.width, this.height, 32, this.height - 32, 25,
 				videoOptions);
 		if (!DynamicLightsStateManager.isSupported()) {
