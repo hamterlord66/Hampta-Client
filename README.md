@@ -1,4 +1,4 @@
 # Hampta Client
-update: Beta 1.0.0
+update: Beta 1.0.3
 dont ask
 updating rn
